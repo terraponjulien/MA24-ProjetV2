@@ -17,6 +17,7 @@ namespace MA24Projet
             InitializeComponent();
             //Démarrage des deux timers au lancement de l'application
             timerChrono.Start();
+            timer1.Start();
         }
 
         //Initialisation de la variable start qui contient la date, l'heure, les secondes... de l'ordinateur au démarage du programme
@@ -29,6 +30,25 @@ namespace MA24Projet
             DateTime now = DateTime.Now;
             time = now - start;
             lblChrono.Text = time.Hours.ToString("d2") + ":" + time.Minutes.ToString("d2") + ":" + time.Seconds.ToString("d2") + ":" + time.Milliseconds.ToString("d2");
+        }
+
+        //Initialisationdes deux variables qui permettront d'afficher le bon message
+        double secondes = 0;
+        double minutes = 0;
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            //Va afficher le message mis a jour toutes les 5 secondes
+            secondes = secondes + 5;
+            if (secondes < 60)
+            {
+                lblTemps.Text = "Vous avez lancé le programme il y a " + secondes + " secondes";
+            }
+            else
+            {
+                //Opération permettant de passer en minutes
+                minutes = secondes / 60;
+                lblTemps.Text = "Vous avez lancé le programme il y a " + minutes + " minutes";
+            }
         }
     }
 }

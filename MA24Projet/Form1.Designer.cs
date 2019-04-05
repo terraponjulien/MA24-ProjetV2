@@ -32,6 +32,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblChrono = new System.Windows.Forms.Label();
             this.timerChrono = new System.Windows.Forms.Timer(this.components);
+            this.lblTemps = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // label1
@@ -58,11 +60,26 @@
             this.timerChrono.Interval = 1;
             this.timerChrono.Tick += new System.EventHandler(this.timerChrono_Tick);
             // 
+            // lblTemps
+            // 
+            this.lblTemps.AutoSize = true;
+            this.lblTemps.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTemps.Location = new System.Drawing.Point(17, 74);
+            this.lblTemps.Name = "lblTemps";
+            this.lblTemps.Size = new System.Drawing.Size(0, 25);
+            this.lblTemps.TabIndex = 4;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 5000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 207);
+            this.Controls.Add(this.lblTemps);
             this.Controls.Add(this.lblChrono);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
@@ -77,6 +94,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblChrono;
         private System.Windows.Forms.Timer timerChrono;
+        private System.Windows.Forms.Label lblTemps;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
