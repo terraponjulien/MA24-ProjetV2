@@ -29,12 +29,54 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblChrono = new System.Windows.Forms.Label();
+            this.timerChrono = new System.Windows.Forms.Timer(this.components);
+            this.SuspendLayout();
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(82, 25);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Chrono";
+            // 
+            // lblChrono
+            // 
+            this.lblChrono.AutoSize = true;
+            this.lblChrono.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChrono.Location = new System.Drawing.Point(100, 32);
+            this.lblChrono.Name = "lblChrono";
+            this.lblChrono.Size = new System.Drawing.Size(0, 25);
+            this.lblChrono.TabIndex = 3;
+            // 
+            // timerChrono
+            // 
+            this.timerChrono.Interval = 1;
+            this.timerChrono.Tick += new System.EventHandler(this.timerChrono_Tick);
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 207);
+            this.Controls.Add(this.lblChrono);
+            this.Controls.Add(this.label1);
+            this.Name = "Form1";
             this.Text = "Form1";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblChrono;
+        private System.Windows.Forms.Timer timerChrono;
     }
 }
 
