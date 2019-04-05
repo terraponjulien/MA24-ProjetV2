@@ -18,6 +18,8 @@ namespace MA24Projet
             //Démarrage des deux timers au lancement de l'application
             timerChrono.Start();
             timer1.Start();
+            //Rend le bouton Restart inclickable au lancement de l'application
+            cmdRestart.Enabled = false;
         }
 
         //Initialisation de la variable start qui contient la date, l'heure, les secondes... de l'ordinateur au démarage du programme
@@ -62,6 +64,18 @@ namespace MA24Projet
             //Remise à zero des variables secondes et minutes
             secondes = 0;
             minutes = 0;
+            //Rend le bouton Restart clickable après avoir clicker sur le bouton Reset
+            cmdRestart.Enabled = true;
+        }
+
+        private void cmdRestart_Click(object sender, EventArgs e)
+        {
+            //Restart du chrono et du timer1
+            start = DateTime.Now;
+            timerChrono.Start();
+            timer1.Start();
+            //Remet le bouton restart inclickable
+            cmdRestart.Enabled = false;
         }
     }
 }

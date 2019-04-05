@@ -96,6 +96,7 @@
             this.cmdRestart.TabIndex = 6;
             this.cmdRestart.Text = "Restart";
             this.cmdRestart.UseVisualStyleBackColor = true;
+            this.cmdRestart.Click += new System.EventHandler(this.cmdRestart_Click);
             // 
             // Form1
             // 
