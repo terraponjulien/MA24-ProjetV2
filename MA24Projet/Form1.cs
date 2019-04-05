@@ -50,5 +50,18 @@ namespace MA24Projet
                 lblTemps.Text = "Vous avez lancé le programme il y a " + minutes + " minutes";
             }
         }
+
+        private void cmdReset_Click(object sender, EventArgs e)
+        {
+            //Mise à zero du chrono et du timer1
+            time = TimeSpan.Zero;
+            timerChrono.Stop();
+            timer1.Stop();
+            lblChrono.Text = time.Hours.ToString("d2") + ":" + time.Minutes.ToString("d2") + ":" + time.Seconds.ToString("d2") + ":" + time.Milliseconds.ToString("d2");
+            lblTemps.Text = "";
+            //Remise à zero des variables secondes et minutes
+            secondes = 0;
+            minutes = 0;
+        }
     }
 }

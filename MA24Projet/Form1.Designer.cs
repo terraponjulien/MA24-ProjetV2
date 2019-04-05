@@ -34,6 +34,8 @@
             this.timerChrono = new System.Windows.Forms.Timer(this.components);
             this.lblTemps = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.cmdReset = new System.Windows.Forms.Button();
+            this.cmdRestart = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -74,11 +76,34 @@
             this.timer1.Interval = 5000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // cmdReset
+            // 
+            this.cmdReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdReset.Location = new System.Drawing.Point(12, 112);
+            this.cmdReset.Name = "cmdReset";
+            this.cmdReset.Size = new System.Drawing.Size(85, 41);
+            this.cmdReset.TabIndex = 5;
+            this.cmdReset.Text = "Reset";
+            this.cmdReset.UseVisualStyleBackColor = true;
+            this.cmdReset.Click += new System.EventHandler(this.cmdReset_Click);
+            // 
+            // cmdRestart
+            // 
+            this.cmdRestart.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdRestart.Location = new System.Drawing.Point(105, 112);
+            this.cmdRestart.Name = "cmdRestart";
+            this.cmdRestart.Size = new System.Drawing.Size(95, 40);
+            this.cmdRestart.TabIndex = 6;
+            this.cmdRestart.Text = "Restart";
+            this.cmdRestart.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 207);
+            this.ClientSize = new System.Drawing.Size(800, 174);
+            this.Controls.Add(this.cmdRestart);
+            this.Controls.Add(this.cmdReset);
             this.Controls.Add(this.lblTemps);
             this.Controls.Add(this.lblChrono);
             this.Controls.Add(this.label1);
@@ -96,6 +121,8 @@
         private System.Windows.Forms.Timer timerChrono;
         private System.Windows.Forms.Label lblTemps;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button cmdReset;
+        private System.Windows.Forms.Button cmdRestart;
     }
 }
 
