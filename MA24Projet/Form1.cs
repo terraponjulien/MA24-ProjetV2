@@ -39,8 +39,8 @@ namespace MA24Projet
         double minutes = 0;
         private void timer1_Tick(object sender, EventArgs e)
         {
-            //Va afficher le message mis a jour toutes les 5 secondes
-            secondes = secondes + 5;
+            //Va afficher le message mis a jour toutes les 10 secondes
+            secondes = secondes + 10;
             if (secondes < 60)
             {
                 lblTemps.Text = "Vous avez lancé le programme il y a " + secondes + " secondes";
